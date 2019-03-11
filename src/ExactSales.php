@@ -1,4 +1,4 @@
-<?php namespace silici0\ExactSales;
+<?php namespace silici0;
 
 use Curl\Curl;
 
