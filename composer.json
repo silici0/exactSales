@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-          "silici0\\ExactSales": "src/"
+          "silici0\\ExactSales\\": "src/"
         }
     },
     "require": {
