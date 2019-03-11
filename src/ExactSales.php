@@ -2,7 +2,7 @@
 
 use Curl\Curl;
 
-class ExactSalesService {
+class ExactSales {
 	private $config;
 	private $curl;
 	private $token;
