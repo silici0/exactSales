@@ -1,5 +1,5 @@
 {
-    "name": "silici0/exact-sales",
+    "name": "silici0/exactSales",
     "description": "API integracao PHP com ExactSales",
     "type": "library",
     "authors": [
@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "silici0\\ExactSales" : "src/"
+            "silici0\\exactSales" : "src/"
         }
     },
     "require": {
