@@ -30,7 +30,7 @@ class ExactSales {
 		if ($this->curl->error)
             return $this->treatError();
         else
-            return treatSuccess($this->curl->response);
+            return $this->treatSuccess($this->curl->response);
         
 	}
 
