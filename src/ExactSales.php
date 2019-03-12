@@ -11,7 +11,6 @@ class ExactSales {
 
 	public function __construct($token)
 	{
-		echo 'ENTROU';
 		$this->curl = new Curl();
 		$this->token = $token;
 	}
