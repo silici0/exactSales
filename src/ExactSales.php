@@ -27,7 +27,7 @@ class ExactSales {
 			)
 		);
 		$this->curl->setOpt(CURLOPT_POSTFIELDS, $parameters);
-		$this->curl->post($this->apiProcotol.$this->apiUrl."/leads");
+		$this->curl->post($this->apiProcotol.$this->apiUrl."/leads", json_encode($parameters));
 		var_dump($this->curl->response);
 	}
 }
