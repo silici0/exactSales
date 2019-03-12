@@ -15,7 +15,7 @@ class ExactSales {
 		$this->token = $token;
 	}
 
-	private function inserirLead($parameters, $validar_duplicidade = 1, $addcampospersonalizados = 0)
+	public function inserirLead($parameters, $validar_duplicidade = 1, $addcampospersonalizados = 0)
 	{
 		$this->curl->setOpt(CURLOPT_RETURNTRANSFER, TRUE);
 		$this->curl->setOpt(CURLOPT_HEADER, FALSE);
