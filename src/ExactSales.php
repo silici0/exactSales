@@ -25,7 +25,8 @@ class ExactSales {
   				"token_exact: ".$this->token
 			)
 		);
-		$this->curl->post($this->apiProcotol.$this->apiUrl."/leads", json_encode($parameters));
+		$url = $this->apiProcotol.$this->apiUrl."/leads?validar_duplicidade=".$validar_duplicidade."&addcampospersonalizados=".$addcampospersonalizados;
+		$this->curl->post($url, json_encode($parameters));
 		var_dump($this->curl->response);
 	}
 }
