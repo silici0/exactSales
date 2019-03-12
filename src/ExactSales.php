@@ -27,6 +27,25 @@ class ExactSales {
 		);
 		$url = $this->apiProcotol.$this->apiUrl."/leads?validar_duplicidade=".$validar_duplicidade."&addcampospersonalizados=".$addcampospersonalizados;
 		$this->curl->post($url, json_encode($parameters));
-		var_dump($this->curl->response);
+		if ($this->curl->error)
+            return $this->treatError();
+        else
+            return treatSuccess($this->curl->response);
+        
 	}
+
+	private function treatSuccess($response)
+	{
+		$response = json_decode($response, true);
+		return $response;
+	}
+
+	private function treatError()
+    {
+        $message = array();
+        $message['error'] = true;
+        $message['error_code'] = $this->curl->error_code;
+        $message['error_message'] = $this->curl->error_message;
+        return json_encode($message);
+    }
 }
