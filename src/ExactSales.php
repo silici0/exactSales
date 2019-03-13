@@ -19,7 +19,6 @@ class ExactSales {
 	{
 		$this->curl->setOpt(CURLOPT_RETURNTRANSFER, TRUE);
 		$this->curl->setOpt(CURLOPT_HEADER, FALSE);
-		$this->curl->setOpt(CURLOPT_HEADER, TRUE);
 		$this->curl->setOpt(CURLOPT_HTTPHEADER, array(
 				"Content-Type: application/json",
   				"token_exact: ".$this->token
